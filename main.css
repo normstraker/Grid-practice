@@ -13,64 +13,80 @@
 }
 
 body {
+  /* height: calc(100vh - 78px); */
+  height: 100vh;
+  background-color: black;
+}
+
+.header,
+.element-1,
+.element-2,
+.element-3,
+.element-4,
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--eggplant);
+  font-size: 2rem;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 2px var(--eggplant);
+  margin: 0.25rem;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: var(--cambridge-blue);
+  padding: 1rem;
+  margin: 0 0.25rem;
+  border-bottom: 8px solid black;
+}
+
+.main-container {
   display: grid;
   grid-template-columns: repeat(5, 20%);
   grid-template-rows: repeat(5, 20%);
-  height: 100vh;
-  border: 1px solid black;
-  
+  height: 100%;
+  margin-top: 4.6rem;
 }
 
 .element-1 {
   background-color: var(--champagne-pink);
   grid-column: 1 / -1;
   grid-row: 1 / 2;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--eggplant);
-  font-size: 2rem;
-  text-transform: uppercase;
-  text-shadow: 2px 2px 2px var(--eggplant);
-  border: 2px solid black;
 }
 
 .element-2 {
   background-color: var(--cambridge-blue);
   grid-row: 2 / 5;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--eggplant);
-  font-size: 2rem;
-  text-transform: uppercase;
-  text-shadow: 2px 2px 2px var(--eggplant);
-  border: 2px solid black;
 }
 
 .element-3 {
   background-color: var(--ash-gray);
   grid-column: 2 / -1;
   grid-row: 2 / -2;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--eggplant);
-  font-size: 2rem;
-  text-transform: uppercase;
-  text-shadow: 2px 2px 2px var(--eggplant);
-  border: 2px solid black;
 }
 
 .element-4 {
   background-color: var(--tea-rose);
   grid-column: 1 / -1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--eggplant);
-  font-size: 2rem;
-  text-transform: uppercase;
-  text-shadow: 2px 2px 2px var(--eggplant);
-  border: 2px solid black;
+}
+
+footer {
+  padding: 1rem;
+}
+@media (max-width: 640px) {
+  .element-2 {
+    background-color: var(--cambridge-blue);
+    grid-column: 1 / -1;
+    grid-row: 2;
+  }
+  .element-3 {
+    background-color: var(--ash-gray);
+    grid-column: 1 / -1;
+    grid-row: 3 / -2;
+  }
 }
